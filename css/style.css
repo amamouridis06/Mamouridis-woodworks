@@ -519,3 +519,10 @@ input:focus, textarea:focus{
   .form__row{ grid-template-columns: 1fr; }
   .gallery__item img{ height: 200px; }
 }
+
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
