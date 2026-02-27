@@ -737,22 +737,38 @@ input:focus, textarea:focus{
   background: rgba(255,255,255,.07);
 }
 
-.hero__welcome {
-  max-width: 800px;
-  margin: 0 auto;
+#welcome-screen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+  url("../img/logo.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  color: white;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#welcome-screen.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.welcome-content {
+  max-width: 700px;
   padding: 20px;
 }
 
-.hero__welcome h1 {
-  font-size: 48px;
+.welcome-content h1 {
+  font-size: 42px;
   margin-bottom: 20px;
 }
 
-.hero__welcome p {
-  font-size: 20px;
+.welcome-content p {
+  font-size: 18px;
   margin-bottom: 30px;
   opacity: 0.9;
 }
-
 
