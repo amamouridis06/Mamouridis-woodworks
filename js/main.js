@@ -30,25 +30,43 @@ window.addEventListener("scroll", () => {
 });
 
 // Contact form -> opens mail client with prefilled message
-function handleSubmit(e) {
-  e.preventDefault();
-  const form = e.target;
-  const name = form.name.value.trim();
-  const phone = form.phone.value.trim();
-  const email = form.email.value.trim();
-  const message = form.message.value.trim();
+// Contact form -> sends via Formspree (no mailto)
+const form = document.getElementById("contactForm");
 
-  const subject = encodeURIComponent("Προσφορά από site (M Woodworks)");
-  const body = encodeURIComponent(
-    `Ονοματεπώνυμο: ${name}\n` +
-    `Τηλέφωνο: ${phone}\n` +
-    `Email: ${email}\n\n` +
-    `Μήνυμα:\n${message}\n`
-  );
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  // άλλαξε το email σου εδώ:
-  window.location.href = `mailto:info@mwoodworks.gr?subject=${subject}&body=${body}`;
-  return false;
+    const btn = form.querySelector('button[type="submit"]');
+    const original = btn ? btn.textContent : null;
+
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = "Αποστολή...";
+    }
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
+      });
+
+      if (res.ok) {
+        form.reset();
+        if (btn) btn.textContent = "Εστάλη ✅";
+      } else {
+        if (btn) btn.textContent = "Σφάλμα ❌";
+      }
+    } catch (err) {
+      if (btn) btn.textContent = "Σφάλμα ❌";
+    } finally {
+      setTimeout(() => {
+        if (btn && original) {
+          btn.disabled = false;
+          btn.textContent = original;
+        }
+      }, 2000);
+    }
+  });
 }
-
-window.handleSubmit = handleSubmit;
