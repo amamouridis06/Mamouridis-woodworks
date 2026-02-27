@@ -136,13 +136,15 @@ img{ max-width:100%; display:block; }
 }
 
 /* Hero */
-.hero{
+.hero {
   position: relative;
-  overflow:hidden;
-  min-height: calc(100vh - 98px);
-  display:flex;
-  align-items:center;
-  padding: 56px 0 44px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("../img/logo.jpg") center/cover no-repeat;
+  color: white;
 }
 .hero__bg{
   position:absolute;
@@ -734,3 +736,23 @@ input:focus, textarea:focus{
 .planner-toolbar button:hover {
   background: rgba(255,255,255,.07);
 }
+
+.hero__welcome {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero__welcome h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero__welcome p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+
