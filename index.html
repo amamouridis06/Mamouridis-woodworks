@@ -15,6 +15,11 @@
 </head>
 
 <body>
+<script>
+  if (localStorage.getItem("devAccess") === "true") {
+    window.location.href = "site.html";
+  }
+</script>
 <main class="wrap">
   <div class="card">
     <div class="brand">
@@ -72,4 +77,3 @@
 <script src="js/coming-soon.js"></script>
 </body>
 </html>
-
