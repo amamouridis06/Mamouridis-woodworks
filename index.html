@@ -272,6 +272,123 @@
   </div>
 </section>
 
+<section class="section" id="kitchen-planner">
+  <div class="container">
+    <div class="section__head">
+      <h2>Σχεδίασε την κουζίνα σου</h2>
+      <p>Διάλεξε διάταξη, βάλε διαστάσεις και στείλε μας τα στοιχεία για προσφορά.</p>
+    </div>
+
+    <div class="planner">
+      <!-- Left: Form -->
+      <form class="planner__form" id="plannerForm">
+        <div class="planner__grid">
+          <label>
+            Διάταξη
+            <select name="layout" id="layout" required>
+              <option value="I">Ι (Μονή)</option>
+              <option value="L">L</option>
+              <option value="U">U</option>
+            </select>
+          </label>
+
+          <label>
+            Μήκος A (cm)
+            <input type="number" name="lenA" id="lenA" min="100" max="1000" value="300" required />
+          </label>
+
+          <label class="dimB">
+            Μήκος B (cm)
+            <input type="number" name="lenB" id="lenB" min="60" max="1000" value="200" />
+          </label>
+
+          <label class="dimC">
+            Μήκος C (cm)
+            <input type="number" name="lenC" id="lenC" min="60" max="1000" value="200" />
+          </label>
+
+          <label>
+            Πάνω ντουλάπια
+            <select name="upper" id="upper">
+              <option value="Ναι">Ναι</option>
+              <option value="Όχι">Όχι</option>
+            </select>
+          </label>
+
+          <label>
+            Κάτω ντουλάπια
+            <select name="lower" id="lower">
+              <option value="Ναι">Ναι</option>
+              <option value="Όχι">Όχι</option>
+            </select>
+          </label>
+
+          <label>
+            Πάγκος
+            <select name="top" id="topFinish">
+              <option value="Laminate">Laminate</option>
+              <option value="Quartz">Quartz</option>
+              <option value="Granite">Granite</option>
+              <option value="Solid Wood">Solid Wood</option>
+            </select>
+          </label>
+
+          <label>
+            Χρώμα / Απόχρωση
+            <input type="text" name="color" id="color" placeholder="π.χ. Δρυς φυσικό / Λευκό ματ" />
+          </label>
+
+          <label class="full">
+            Σημειώσεις (συσκευές, νησίδα, ψηλά ντουλάπια κ.λπ.)
+            <textarea name="notes" id="notes" rows="4" placeholder="π.χ. Θέλω θέση για πλυντήριο πιάτων 60cm..."></textarea>
+          </label>
+        </div>
+
+        <div class="planner__actions">
+          <button type="button" class="btn btn--ghost" id="resetPlanner">Καθαρισμός</button>
+          <button type="submit" class="btn btn--primary">Δημιουργία σύνοψης</button>
+        </div>
+      </form>
+
+      <!-- Right: Preview + Summary -->
+      <div class="planner__preview">
+        <div class="preview-card">
+          <div class="preview-card__top">
+            <h3>Προεπισκόπηση</h3>
+            <span class="muted">Ενδεικτικό 2D</span>
+          </div>
+
+          <div class="kitchen-canvas" aria-label="2D preview">
+            <div class="shape shape--I" id="shapeI"></div>
+            <div class="shape shape--L" id="shapeL"></div>
+            <div class="shape shape--U" id="shapeU"></div>
+          </div>
+
+          <div class="summary">
+            <h3>Σύνοψη για προσφορά</h3>
+            <pre id="summaryText">Συμπλήρωσε τα πεδία και πάτα “Δημιουργία σύνοψης”.</pre>
+
+            <!-- Επιλογή 1: mailto (ανοίγει email στον πελάτη) -->
+            <a class="btn btn--primary" id="sendMailto" href="#" target="_blank" rel="noopener">
+              Στείλε για προσφορά (Email)
+            </a>
+
+            <!-- Επιλογή 2: Formspree (στέλνει κατευθείαν σε εσένα) -->
+            <!-- Για να δουλέψει, βάλε το δικό σου endpoint στο data-endpoint -->
+            <button class="btn btn--ghost" id="sendFormspree" type="button" data-endpoint="">
+              Στείλε κατευθείαν (Formspree)
+            </button>
+
+            <p class="muted" style="margin-top:10px;">
+              * Το Formspree θέλει endpoint. Αν δεν έχεις, χρησιμοποίησε προσωρινά το Email.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Contact -->
 <section class="section" id="contact">
   <div class="container">
