@@ -704,3 +704,33 @@ input:focus, textarea:focus{
   .planner__grid{ grid-template-columns: 1fr; }
   .shape--I{ inset: 72px 24px; }
 }
+
+
+.planner {
+  width: 100%;
+  height: 420px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 18px;
+  background: rgba(255,255,255,.03);
+  overflow: hidden;
+}
+
+.planner-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.planner-toolbar button {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  color: #e9ecf1;
+  cursor: pointer;
+}
+
+.planner-toolbar button:hover {
+  background: rgba(255,255,255,.07);
+}
