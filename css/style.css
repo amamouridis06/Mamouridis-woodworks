@@ -521,8 +521,9 @@ input:focus, textarea:focus{
 }
 
 .center-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  text-align: center;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /*height: 100vh;*/
 }
