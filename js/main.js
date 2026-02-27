@@ -256,11 +256,21 @@ furniture.addEventListener("mousedown", function (e) {
   }, { once: true });
 });
 
-const welcome = document.getElementById("welcome-screen");
-const enterBtn = document.getElementById("enterSite");
+// Welcome screen
+document.addEventListener("DOMContentLoaded", () => {
+  const welcome = document.getElementById("welcome-screen");
+  const enterBtn = document.getElementById("enterSite");
 
-if (enterBtn) {
+  if (!welcome || !enterBtn) {
+    console.warn("Welcome elements not found:", { welcome, enterBtn });
+    return;
+  }
+
+  // lock scroll while welcome is visible
+  document.body.classList.add("locked");
+
   enterBtn.addEventListener("click", () => {
     welcome.classList.add("hide");
+    document.body.classList.remove("locked");
   });
-}
+});
