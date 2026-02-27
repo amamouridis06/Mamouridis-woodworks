@@ -274,3 +274,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("locked");
   });
 });
+
+
+if (!localStorage.getItem("devAccess")) {
+  document.body.style.overflow = "hidden";
+} else {
+  document.getElementById("construction").style.display = "none";
+}
