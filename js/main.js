@@ -260,7 +260,11 @@ furniture.addEventListener("mousedown", function (e) {
 document.addEventListener("DOMContentLoaded", () => {
   const welcome = document.getElementById("welcome-screen");
   const enterBtn = document.getElementById("enterSite");
-
+  if (enterBtn) {
+    enterBtn.addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  }
   if (!welcome || !enterBtn) {
     console.warn("Welcome elements not found:", { welcome, enterBtn });
     return;
@@ -274,10 +278,3 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("locked");
   });
 });
-
-
-if (!localStorage.getItem("devAccess")) {
-  document.body.style.overflow = "hidden";
-} else {
-  document.getElementById("construction").style.display = "none";
-}
