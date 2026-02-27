@@ -70,3 +70,15 @@ if (form) {
     }
   });
 }
+
+const toTopBtn = document.querySelector(".to-top");
+
+if (toTopBtn) {
+  toTopBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
