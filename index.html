@@ -357,7 +357,23 @@
             <h3>Προεπισκόπηση</h3>
             <span class="muted">Ενδεικτικό 2D</span>
           </div>
+          <div class="preview">
+            <div id="planner" class="planner"></div>
 
+            <div class="planner-toolbar">
+              <button type="button" id="addBase">+ Κάτω ντουλάπι</button>
+              <button type="button" id="addWall">+ Πάνω ντουλάπι</button>
+              <button type="button" id="addAppliance">+ Συσκευή</button>
+              <button type="button" id="deleteSelected">Διαγραφή</button>
+              <button type="button" id="resetPlanner">Reset</button>
+            </div>
+
+            <p class="muted">Tip: Κλικ σε αντικείμενο → σύρσιμο. (Σε κινητό: drag με το δάχτυλο)</p>
+          </div>
+
+          <!-- Konva CDN -->
+          <script src="https://unpkg.com/konva@9/konva.min.js"></script>
+          <script src="js/planner.js"></script>
           <div class="kitchen-canvas" aria-label="2D preview">
             <div class="shape shape--I" id="shapeI"></div>
             <div class="shape shape--L" id="shapeL"></div>
