@@ -357,51 +357,38 @@
             <h3>Προεπισκόπηση</h3>
             <span class="muted">Ενδεικτικό 2D</span>
           </div>
+
           <div class="preview">
-            <div id="planner" class="planner"></div>
+            <!-- Konva mounts here -->
+            <div id="planner" class="planner-canvas"></div>
 
             <div class="planner-toolbar">
               <button type="button" id="addBase">+ Κάτω ντουλάπι</button>
               <button type="button" id="addWall">+ Πάνω ντουλάπι</button>
               <button type="button" id="addAppliance">+ Συσκευή</button>
               <button type="button" id="deleteSelected">Διαγραφή</button>
-              <button type="button" id="resetPlanner">Reset</button>
+              <button type="button" id="resetPlannerCanvas">Reset</button>
             </div>
 
             <p class="muted">Tip: Κλικ σε αντικείμενο → σύρσιμο. (Σε κινητό: drag με το δάχτυλο)</p>
-          </div>
-
-          <!-- Konva CDN -->
-          <script src="https://unpkg.com/konva@9/konva.min.js"></script>
-          <script src="js/planner.js"></script>
-          <div class="kitchen-canvas" aria-label="2D preview">
-            <div class="shape shape--I" id="shapeI"></div>
-            <div class="shape shape--L" id="shapeL"></div>
-            <div class="shape shape--U" id="shapeU"></div>
           </div>
 
           <div class="summary">
             <h3>Σύνοψη για προσφορά</h3>
             <pre id="summaryText">Συμπλήρωσε τα πεδία και πάτα “Δημιουργία σύνοψης”.</pre>
 
-            <!-- Επιλογή 1: mailto (ανοίγει email στον πελάτη) -->
             <a class="btn btn--primary" id="sendMailto" href="#" target="_blank" rel="noopener">
               Στείλε για προσφορά (Email)
             </a>
 
-            <!-- Επιλογή 2: Formspree (στέλνει κατευθείαν σε εσένα) -->
-            <!-- Για να δουλέψει, βάλε το δικό σου endpoint στο data-endpoint -->
             <button class="btn btn--ghost" id="sendFormspree" type="button" data-endpoint="">
               Στείλε κατευθείαν (Formspree)
             </button>
-
-            <p class="muted" style="margin-top:10px;">
-              * Το Formspree θέλει endpoint. Αν δεν έχεις, χρησιμοποίησε προσωρινά το Email.
-            </p>
           </div>
         </div>
       </div>
-    </div>
+
+
   </div>
 </section>
 
