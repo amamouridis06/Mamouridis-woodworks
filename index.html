@@ -16,10 +16,12 @@
 <link rel="icon" href="img/logo.jpg" />
 <body>
 <script>
-  if (localStorage.getItem("devAccess") === "true") {
-    window.location.replace = "site.html";
+  // μόνο αν μπεις με ?dev=1 σε πηγαίνει στο κανονικό site
+  if (location.search.includes("dev=1")) {
+    location.replace("/site.html");
   }
 </script>
+
 <main class="wrap">
   <div class="card">
     <div class="brand">
