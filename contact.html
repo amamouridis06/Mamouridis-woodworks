@@ -7,85 +7,222 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<!--</div>-->
-<div id="top"></div>
-<!-- Top bar -->
-<div class="topbar">
-  <div class="container topbar__inner">
-    <div class="topbar__left">
-      <span>📍</span>
-      <span class="dot">•</span>
-      <a href="tel:+306900000000">📞 +30 690 000 0000</a>
-    </div>
-    <div class="topbar__right">
-      <a href="#contact">Ζητήστε προσφορά</a>
-    </div>
+<section class="contact-hero">
+  <div class="contact-hero__text">
+    <h1>Επικοινωνία</h1>
+    <p>Πες μας τι χρειάζεσαι και θα σου στείλουμε προσφορά.</p>
   </div>
-</div>
 
-<!-- Header -->
-<header class="header">
-  <div class="container header__inner">
-    <a class="brand" href="#top" aria-label="M Woodworks">
-      <span class="brand__text">
-          <span class="brand__name">Woodworks</span>
-          <span class="brand__tag">Ξυλουργικές Κατασκευές</span>
-        </span>
-    </a>
-
-    <button class="nav-toggle" aria-label="Άνοιγμα μενού" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="nav" aria-label="Κύρια πλοήγηση">
-      <a href="services.html">Υπηρεσίες</a>
-      <a href="portfolio.html">Οι δουλειές μας</a>
-      <a href="about.html">Σχετικά</a>
-      <a href="contact.html" class="nav__cta">Επικοινωνία</a>
-    </nav>
-  </div>
-</header>
-<!-- Contact -->
-<section class="section" id="contact">
-  <div class="container">
-    <div class="section__head">
-      <h2>Επικοινωνία</h2>
-      <p>Πες μας τι χρειάζεσαι και θα σου στείλουμε προσφορά.</p>
-    </div>
-
-    <div class="contact">
-      <div class="contact__info">
-        <div class="info-card">
-          <h3>Στοιχεία</h3>
-          <p><strong>Τηλέφωνο:</strong> <a href="tel:+306900000000">+30 690 000 0000</a></p>
-          <p><strong>Email:</strong> <a href="mailto:X">Χ</a></p>
-          <p><strong>Περιοχή:</strong> Χ</p>
-          <p class="muted">Ωράριο: Δευ–Σαβ 09:00–14.30 & 17.30-21:00</p>
-        </div>
-      </div>
-    </div>
+  <div class="contact-cta">
+    <div class="contact-cta__badge">Δωρεάν</div>
+    <div class="contact-cta__title">Εκτίμηση & Προσφορά</div>
+    <div class="contact-cta__subtitle">Απάντηση συνήθως εντός 24 ωρών.</div>
+    <a class="btn btn--gold" href="#contactForm">Ζητήστε προσφορά</a>
   </div>
 </section>
-<!-- Footer -->
-<footer class="footer">
-  <div class="container footer__inner">
-    <div>
-      <div class="footer__brand">X Woodworks</div>
-      <div class="footer__muted">Ξυλουργικές Κατασκευές • Custom Έπιπλα</div>
+
+<section class="contact-grid">
+  <!-- LEFT: INFO CARD -->
+  <aside class="card contact-card">
+    <h2>Στοιχεία</h2>
+
+    <div class="contact-item">
+      <div class="contact-label">Τηλέφωνο</div>
+      <a class="contact-value" href="tel:+306900000000">+30 690 000 0000</a>
     </div>
 
-    <div class="footer__links">
-      <a href="services.html">Υπηρεσίες</a>
-      <a href="about.html">Σχετικά</a>
-      <a href="contact.html">Επικοινωνία</a>
-      <a href="site.html">Αρχική</a>
+    <div class="contact-item">
+      <div class="contact-label">Email</div>
+      <a class="contact-value" href="mailto:info@xwoodworks.gr">info@xwoodworks.gr</a>
     </div>
 
-    <div class="center-box">© <span id="year"></span> X Woodworks. All rights reserved. Created by X X </div>
-  </div>
-</footer>
+    <div class="contact-item">
+      <div class="contact-label">Περιοχή</div>
+      <div class="contact-value">Αθήνα & Αττική (και κατόπιν συνεννόησης)</div>
+    </div>
 
-<a class="to-top" href="#top" aria-label="Πάνω">↑</a>
-<script src="js/main.js"></script>
+    <div class="contact-item">
+      <div class="contact-label">Ωράριο</div>
+      <div class="contact-value">Δευ–Σαβ 09:00–14:30 & 17:30–21:00</div>
+    </div>
+
+    <div class="contact-divider"></div>
+
+    <!-- OPTIONAL MAP -->
+    <div class="map-wrap">
+      <div class="map-title">Βρείτε μας</div>
+      <!-- Βάλε εδώ το Google Maps embed link σου -->
+      <iframe
+        title="Χάρτης"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Athens&output=embed">
+      </iframe>
+    </div>
+  </aside>
+
+  <!-- RIGHT: FORM -->
+  <section class="card form-card">
+    <h2>Στείλε μας μήνυμα</h2>
+    <p class="muted">Συμπλήρωσε τα στοιχεία και λίγες πληροφορίες για την κατασκευή.</p>
+
+    <!--
+      Επιλογή Α (χωρίς backend): mailto (ανοίγει email client)
+      Επιλογή Β (με backend / service): action="/contact" method="POST"
+    -->
+    <form id="contactForm" class="contact-form" action="mailto:info@xwoodworks.gr" method="POST" enctype="text/plain">
+      <div class="form-row">
+        <label>
+          Ονοματεπώνυμο*
+          <input name="name" type="text" autocomplete="name" required />
+        </label>
+
+        <label>
+          Τηλέφωνο*
+          <input name="phone" type="tel" autocomplete="tel" required />
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label>
+          Email*
+          <input name="email" type="email" autocomplete="email" required />
+        </label>
+
+        <label>
+          Περιοχή
+          <input name="area" type="text" autocomplete="address-level2" placeholder="π.χ. Περιστέρι" />
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label>
+          Τύπος έργου
+          <select name="project">
+            <option value="">Διάλεξε</option>
+            <option>Κουζίνα</option>
+            <option>Ντουλάπα</option>
+            <option>Ειδική κατασκευή</option>
+            <option>Έπιπλο κατά παραγγελία</option>
+            <option>Άλλο</option>
+          </select>
+        </label>
+
+        <label>
+          Προϋπολογισμός
+          <select name="budget">
+            <option value="">Προαιρετικό</option>
+            <option>Έως 500€</option>
+            <option>500€ – 1.500€</option>
+            <option>1.500€ – 3.000€</option>
+            <option>3.000€+</option>
+          </select>
+        </label>
+      </div>
+
+      <label>
+        Μήνυμα*
+        <textarea name="message" rows="5" required placeholder="Πες μας διαστάσεις, υλικά που προτιμάς, προθεσμία, κτλ."></textarea>
+      </label>
+
+      <label class="check">
+        <input id="gdpr" type="checkbox" required />
+        <span>Συμφωνώ με την επεξεργασία των στοιχείων μου για την επικοινωνία (GDPR).</span>
+      </label>
+
+      <div class="form-actions">
+        <button class="btn btn--gold" type="submit">Αποστολή</button>
+        <span id="formHint" class="hint" aria-live="polite"></span>
+      </div>
+    </form>
+  </section>
+</section>
+
+<!-- Floating WhatsApp Button -->
+<a class="fab-whatsapp"
+   href="https://wa.me/306900000000?text=Γεια%20σας!%20Θα%20ήθελα%20προσφορά%20για..."
+   target="_blank" rel="noopener">
+  WhatsApp
+</a>
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--<div id="top"></div>-->
+<!--&lt;!&ndash; Top bar &ndash;&gt;-->
+<!--<div class="topbar">-->
+<!--  <div class="container topbar__inner">-->
+<!--    <div class="topbar__left">-->
+<!--      <span>📍</span>-->
+<!--      <span class="dot">•</span>-->
+<!--      <a href="tel:+306900000000">📞 +30 690 000 0000</a>-->
+<!--    </div>-->
+<!--    <div class="topbar__right">-->
+<!--      <a href="#contact">Ζητήστε προσφορά</a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Header &ndash;&gt;-->
+<!--<header class="header">-->
+<!--  <div class="container header__inner">-->
+<!--    <a class="brand" href="#top" aria-label="M Woodworks">-->
+<!--      <span class="brand__text">-->
+<!--          <span class="brand__name">Woodworks</span>-->
+<!--          <span class="brand__tag">Ξυλουργικές Κατασκευές</span>-->
+<!--        </span>-->
+<!--    </a>-->
+
+<!--    <button class="nav-toggle" aria-label="Άνοιγμα μενού" aria-expanded="false">-->
+<!--      <span></span><span></span><span></span>-->
+<!--    </button>-->
+
+<!--    <nav class="nav" aria-label="Κύρια πλοήγηση">-->
+<!--      <a href="services.html">Υπηρεσίες</a>-->
+<!--      <a href="portfolio.html">Οι δουλειές μας</a>-->
+<!--      <a href="about.html">Σχετικά</a>-->
+<!--      <a href="contact.html" class="nav__cta">Επικοινωνία</a>-->
+<!--    </nav>-->
+<!--  </div>-->
+<!--</header>-->
+<!--&lt;!&ndash; Contact &ndash;&gt;-->
+<!--<section class="section" id="contact">-->
+<!--  <div class="container">-->
+<!--    <div class="section__head">-->
+<!--      <h2>Επικοινωνία</h2>-->
+<!--      <p>Πες μας τι χρειάζεσαι και θα σου στείλουμε προσφορά.</p>-->
+<!--    </div>-->
+
+<!--    <div class="contact">-->
+<!--      <div class="contact__info">-->
+<!--        <div class="info-card">-->
+<!--          <h3>Στοιχεία</h3>-->
+<!--          <p><strong>Τηλέφωνο:</strong> <a href="tel:+306900000000">+30 690 000 0000</a></p>-->
+<!--          <p><strong>Email:</strong> <a href="mailto:X">Χ</a></p>-->
+<!--          <p><strong>Περιοχή:</strong> Χ</p>-->
+<!--          <p class="muted">Ωράριο: Δευ–Σαβ 09:00–14.30 & 17.30-21:00</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; Footer &ndash;&gt;-->
+<!--<footer class="footer">-->
+<!--  <div class="container footer__inner">-->
+<!--    <div>-->
+<!--      <div class="footer__brand">X Woodworks</div>-->
+<!--      <div class="footer__muted">Ξυλουργικές Κατασκευές • Custom Έπιπλα</div>-->
+<!--    </div>-->
+
+<!--    <div class="footer__links">-->
+<!--      <a href="services.html">Υπηρεσίες</a>-->
+<!--      <a href="about.html">Σχετικά</a>-->
+<!--      <a href="contact.html">Επικοινωνία</a>-->
+<!--      <a href="site.html">Αρχική</a>-->
+<!--    </div>-->
+
+<!--    <div class="center-box">© <span id="year"></span> X Woodworks. All rights reserved. Created by X X </div>-->
+<!--  </div>-->
+<!--</footer>-->
+
+<!--<a class="to-top" href="#top" aria-label="Πάνω">↑</a>-->
+<!--<script src="js/main.js"></script>-->
 </body>
 </html>
