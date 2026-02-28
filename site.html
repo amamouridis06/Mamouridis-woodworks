@@ -8,6 +8,21 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+<!--<div id="construction">-->
+<!--  <div class="box">-->
+<!--    <h1>🚧 Υπό Κατασκευή</h1>-->
+<!--    <p>Η σελίδα θα είναι σύντομα διαθέσιμη.</p>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div id="welcome-screen">-->
+<!--  <div class="welcome-content">-->
+<!--    <h1>Καλωσορίσατε στην <span class="accent">X Woodworks</span></h1>-->
+<!--    <p>Ξυλουργικές κατασκευές υψηλής ποιότητας στα μέτρα σας.</p>-->
+<!--    <a href="/" class="btn btn&#45;&#45;primary">-->
+<!--      Είσοδος-->
+<!--    </a>-->
+
+<!--  </div>-->
 <!--</div>-->
 <div id="top"></div>
 <!-- Top bar -->
@@ -186,146 +201,7 @@
   </div>
 </section>
 
-<!--<section class="section" id="kitchen-planner">-->
-<!--  <div class="container">-->
-<!--    <div class="section__head">-->
-<!--      <h2>Σχεδίασε την κουζίνα σου</h2>-->
-<!--      <p>Διάλεξε διάταξη, βάλε διαστάσεις και στείλε μας τα στοιχεία για προσφορά.</p>-->
-<!--    </div>-->
 
-<!--    <div class="planner">-->
-<!--      &lt;!&ndash; Left: Form &ndash;&gt;-->
-<!--      <form class="planner__form" id="plannerForm">-->
-<!--        <div class="planner__grid">-->
-<!--          <label>-->
-<!--            Διάταξη-->
-<!--            <select name="layout" id="layout" required>-->
-<!--              <option value="I">Ι (Μονή)</option>-->
-<!--              <option value="L">L</option>-->
-<!--              <option value="U">U</option>-->
-<!--            </select>-->
-<!--          </label>-->
-
-<!--          <label>-->
-<!--            Μήκος A (cm)-->
-<!--            <input type="number" name="lenA" id="lenA" min="100" max="1000" value="300" required />-->
-<!--          </label>-->
-
-<!--          <label class="dimB">-->
-<!--            Μήκος B (cm)-->
-<!--            <input type="number" name="lenB" id="lenB" min="60" max="1000" value="200" />-->
-<!--          </label>-->
-
-<!--          <label class="dimC">-->
-<!--            Μήκος C (cm)-->
-<!--            <input type="number" name="lenC" id="lenC" min="60" max="1000" value="200" />-->
-<!--          </label>-->
-
-<!--          <label>-->
-<!--            Πάνω ντουλάπια-->
-<!--            <select name="upper" id="upper">-->
-<!--              <option value="Ναι">Ναι</option>-->
-<!--              <option value="Όχι">Όχι</option>-->
-<!--            </select>-->
-<!--          </label>-->
-
-<!--          <label>-->
-<!--            Κάτω ντουλάπια-->
-<!--            <select name="lower" id="lower">-->
-<!--              <option value="Ναι">Ναι</option>-->
-<!--              <option value="Όχι">Όχι</option>-->
-<!--            </select>-->
-<!--          </label>-->
-
-<!--          <label>-->
-<!--            Πάγκος-->
-<!--            <select name="top" id="topFinish">-->
-<!--              <option value="Laminate">Laminate</option>-->
-<!--              <option value="Quartz">Quartz</option>-->
-<!--              <option value="Granite">Granite</option>-->
-<!--              <option value="Solid Wood">Solid Wood</option>-->
-<!--            </select>-->
-<!--          </label>-->
-
-<!--          <label>-->
-<!--            Χρώμα / Απόχρωση-->
-<!--            <input type="text" name="color" id="color" placeholder="π.χ. Δρυς φυσικό / Λευκό ματ" />-->
-<!--          </label>-->
-
-<!--          <label class="full">-->
-<!--            Σημειώσεις (συσκευές, νησίδα, ψηλά ντουλάπια κ.λπ.)-->
-<!--            <textarea name="notes" id="notes" rows="4" placeholder="π.χ. Θέλω θέση για πλυντήριο πιάτων 60cm..."></textarea>-->
-<!--          </label>-->
-<!--        </div>-->
-
-<!--        <div class="planner__actions">-->
-<!--          <button type="button" class="btn btn&#45;&#45;ghost" id="resetPlanner">Καθαρισμός</button>-->
-<!--          <button type="submit" class="btn btn&#45;&#45;primary">Δημιουργία σύνοψης</button>-->
-<!--        </div>-->
-<!--      </form>-->
-
-<!--      &lt;!&ndash; Right: Preview + Summary &ndash;&gt;-->
-<!--      <div class="planner__preview">-->
-<!--        <div class="preview-card">-->
-<!--          <div class="preview-card__top">-->
-<!--            <h3>Προεπισκόπηση</h3>-->
-<!--            <span class="muted">Ενδεικτικό 2D</span>-->
-<!--          </div>-->
-
-<!--          <div class="preview">-->
-<!--            &lt;!&ndash; Konva mounts here &ndash;&gt;-->
-<!--            <div id="planner" class="planner-canvas"></div>-->
-
-<!--            <div class="planner-toolbar">-->
-<!--              <button type="button" id="addBase">+ Κάτω ντουλάπι</button>-->
-<!--              <button type="button" id="addWall">+ Πάνω ντουλάπι</button>-->
-<!--              <button type="button" id="addAppliance">+ Συσκευή</button>-->
-<!--              <button type="button" id="deleteSelected">Διαγραφή</button>-->
-<!--              <button type="button" id="resetPlannerCanvas">Reset</button>-->
-<!--            </div>-->
-
-<!--            <p class="muted">Tip: Κλικ σε αντικείμενο → σύρσιμο. (Σε κινητό: drag με το δάχτυλο)</p>-->
-<!--          </div>-->
-
-<!--          <div class="summary">-->
-<!--            <h3>Σύνοψη για προσφορά</h3>-->
-<!--            <pre id="summaryText">Συμπλήρωσε τα πεδία και πάτα “Δημιουργία σύνοψης”.</pre>-->
-
-<!--            <a class="btn btn&#45;&#45;primary" id="sendMailto" href="#" target="_blank" rel="noopener">-->
-<!--              Στείλε για προσφορά (Email)-->
-<!--            </a>-->
-
-<!--            <button class="btn btn&#45;&#45;ghost" id="sendFormspree" type="button" data-endpoint="">-->
-<!--              Στείλε κατευθείαν (Formspree)-->
-<!--            </button>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    </div>-->
-<!--</section>-->
-
-<!-- Contact -->
-<section class="section" id="contact">
-  <div class="container">
-    <div class="section__head">
-      <h2>Επικοινωνία</h2>
-      <p>Πες μας τι χρειάζεσαι και θα σου στείλουμε προσφορά.</p>
-    </div>
-
-    <div class="contact">
-      <div class="contact__info">
-        <div class="info-card">
-          <h3>Στοιχεία</h3>
-          <p><strong>Τηλέφωνο:</strong> <a href="tel:+306900000000">+30 690 000 0000</a></p>
-          <p><strong>Email:</strong> <a href="mailto:X">Χ</a></p>
-          <p><strong>Περιοχή:</strong> Χ</p>
-          <p class="muted">Ωράριο: Δευ–Σαβ 09:00–14.30 & 17.30-21:00</p>
-        </div>
-      </div>
-    </div>
-    </div>
-</section>
 
 <!--        <div class="info-card">-->
 <!--          <h3>Έτοιμο κείμενο για μήνυμα</h3>-->
