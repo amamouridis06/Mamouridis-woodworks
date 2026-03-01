@@ -1020,13 +1020,6 @@ input:focus, textarea:focus{
   }
 }
 
-.section-head{
-  margin-bottom: 18px;
-}
-.section-head .muted{
-  opacity: .75;
-  margin: 6px 0 0;
-}
 
 /* Process */
 .process-grid{
@@ -1122,22 +1115,6 @@ input:focus, textarea:focus{
   .stats-grid{ grid-template-columns: 1fr; }
 }
 
-
-/* Sections (safe defaults) */
-.section{
-  padding: 70px 0;
-}
-.section--soft{
-  background: rgba(255,255,255,.02);
-  border-top: 1px solid rgba(255,255,255,.06);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-}
-.section-head{
-  margin-bottom: 18px;
-}
-.section-head h2{
-  margin: 0 0 10px;
-}
 .muted{
   margin: 0;
   opacity: .75;
