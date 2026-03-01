@@ -426,40 +426,6 @@ input:focus, textarea:focus{
 }
 .muted{ color: var(--muted); font-size: 13px; }
 
-/* Footer */
-.footer{
-  border-top: 1px solid var(--line);
-  background: rgba(255,255,255,.02);
-  padding: 26px 0;
-}
-.footer__inner{
-  display:grid;
-  grid-template-columns: 1fr auto;
-  gap: 16px;
-  align-items:center;
-}
-.footer__brand{ font-weight:900; letter-spacing:.3px; }
-.footer__muted{ color: var(--muted); font-size: 13px; margin-top: 4px; }
-.footer__links{
-  display:flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-.footer__links a{
-  text-decoration:none;
-  color: var(--muted);
-  font-weight:600;
-  font-size: 13px;
-}
-.footer__links a:hover{ color: var(--text); }
-.footer__copy{
-  grid-column: 1 / -1;
-  color: var(--muted);
-  font-size: 12px;
-  margin-top: 8px;
-}
-
 /* To top */
 .to-top{
   position: fixed;
