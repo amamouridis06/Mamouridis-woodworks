@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Επικοινωνία | Ξυλουργείο Μαμουρίδης </title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="top"></div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header__inner">
+
+    <a class="brand" href="index.html" aria-label="Μαμουρίδης Έπιπλα ">
+      <span class="brand__text">
+        <span class="brand__name">Ξυλουργείο Μαμουρίδης</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Άνοιγμα μενού" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" aria-label="Κύρια πλοήγηση">
+      <a href="services.html">Υπηρεσίες</a>
+      <a href="portfolio.html">Οι δουλειές μας</a>
+      <a href="contact.html" class="nav__cta">Επικοινωνία</a>
+    </nav>
+  </div>
+</header>
+<!-- About -->
+<section class="section section--soft" id="about">
+  <div class="container">
+    <div class="split">
+      <div class="split__text">
+        <h2>Σχετικά με εμάς</h2>
+        <p>
+          Στο <strong>X Woodworks</strong> φτιάχνουμε ξύλινες κατασκευές που “κουμπώνουν” στον χώρο και στον τρόπο που ζείτε.
+          Δουλεύουμε με συνέπεια, σωστά υλικά και προσοχή στη λεπτομέρεια.
+        </p>
+        <div class="checks">
+          <div>✔ Καθαρό φινίρισμα</div>
+          <div>✔ Συμφωνημένοι χρόνοι</div>
+          <div>✔ Επαγγελματική τοποθέτηση</div>
+          <div>✔ Υλικά & μηχανισμοί επιλογής</div>
+        </div>
+      </div>
+
+      <div class="split__box">
+        <div class="quote">
+          <p>«Κατασκευές με χαρακτήρα, σχεδιασμένες για την καθημερινότητά σας.»</p>
+          <span>— X Woodworks</span>
+        </div>
+        <div class="mini-cards">
+          <div class="mini-card">
+            <div class="mini-card__title">Εγγύηση</div>
+            <div class="mini-card__text">Υποστήριξη μετά την παράδοση.</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-card__title">Μέτρηση</div>
+            <div class="mini-card__text">Ακριβείς διαστάσεις στον χώρο.</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-card__title">Ποιότητα</div>
+            <div class="mini-card__text">Επιλεγμένα υλικά & μηχανισμοί.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container footer__inner">
+
+    <div class="footer__brand">
+      <div class="footer__logo">Ξυλουργείο Μαμουρίδης</div>
+    </div>
+
+    <nav class="footer__nav" aria-label="Footer navigation">
+      <a href="services.html">Υπηρεσίες</a>
+      <a href="portfolio.html">Οι δουλειές μας</a>
+      <a href="about.html">Σχετικά</a>
+      <a href="index.html">Αρχική</a>
+    </nav>
+
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <span>© <span id="year"></span> Ξυλουργείο Μαμουρίδης. All rights reserved.</span>
+      <span class="footer__madeby">Created by <a href="https://github.com/amamouridis06" rel="noopener">Angel Dev</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<a class="to-top" href="#top" aria-label="Πάνω">↑</a>
+<script src="js/main.js"></script>
+</body>
+</html>
