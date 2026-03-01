@@ -1155,3 +1155,117 @@ input:focus, textarea:focus{
   .process-grid{ grid-template-columns: 1fr; }
   .stats-grid{ grid-template-columns: 1fr; }
 }
+
+
+/* Sections (safe defaults) */
+.section{
+  padding: 70px 0;
+}
+.section--soft{
+  background: rgba(255,255,255,.02);
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.section-head{
+  margin-bottom: 18px;
+}
+.section-head h2{
+  margin: 0 0 10px;
+}
+.muted{
+  margin: 0;
+  opacity: .75;
+  max-width: 720px;
+}
+
+/* Process */
+.process-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+.process-step{
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.10);
+}
+.process-num{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 800;
+  background: rgba(197,160,78,.18);
+  border: 1px solid rgba(197,160,78,.35);
+  margin-bottom: 12px;
+}
+.process-step h3{
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+.process-step p{
+  margin: 0;
+  opacity: .78;
+  line-height: 1.5;
+}
+
+/* Testimonials */
+.testi-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+.testi-card{
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.10);
+}
+.testi-stars{
+  letter-spacing: 2px;
+  opacity: .9;
+}
+.testi-text{
+  margin: 10px 0 12px;
+  opacity: .85;
+  line-height: 1.6;
+}
+.testi-author{
+  opacity: .7;
+  font-size: 14px;
+}
+.section-actions{
+  margin-top: 18px;
+}
+
+/* CTA */
+.cta-card{
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.10);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 18px;
+}
+.cta-actions{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .process-grid{ grid-template-columns: repeat(2, 1fr); }
+  .cta-card{ flex-direction: column; align-items:flex-start; }
+}
+@media (max-width: 560px){
+  .process-grid{ grid-template-columns: 1fr; }
+  .testi-grid{ grid-template-columns: 1fr; }
+}
