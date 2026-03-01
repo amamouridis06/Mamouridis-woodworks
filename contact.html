@@ -23,7 +23,9 @@
 <!--    </div>-->
   </div>
 </div>
-
+<button class="back-btn" onclick="goBack()">
+  ← Πίσω
+</button>
 <!-- Header -->
 <header class="header">
   <div class="container header__inner">
@@ -46,6 +48,8 @@
     </nav>
   </div>
 </header>
+
+
 <section class="contact-hero">
   <div class="contact-hero__text">
     <h1>Επικοινωνία</h1>
@@ -164,10 +168,10 @@
         <textarea name="message" rows="5" required placeholder="Πες μας διαστάσεις, υλικά που προτιμάς, προθεσμία, κτλ."></textarea>
       </label>
 
-      <label class="check">
-        <input id="gdpr" type="checkbox" required />
-        <span>Συμφωνώ με την επεξεργασία των στοιχείων μου για την επικοινωνία (GDPR).</span>
-      </label>
+<!--      <label class="check">-->
+<!--        <input id="gdpr" type="checkbox" required />-->
+<!--        <span>Συμφωνώ με την επεξεργασία των στοιχείων μου για την επικοινωνία (GDPR).</span>-->
+<!--      </label>-->
 
       <div class="form-actions">
         <button class="btn btn--gold" type="submit">Αποστολή</button>
@@ -176,10 +180,6 @@
     </form>
   </section>
 </section>
-
-<!-- Floating WhatsApp Button -->
-
-
 
 <!-- Footer -->
 <footer class="footer">
@@ -206,5 +206,14 @@
 
 <a class="to-top" href="#top" aria-label="Πάνω">↑</a>
 <script src="js/main.js"></script>
+<script>
+  function goBack() {
+    if (document.referrer) {
+      window.history.back();
+    } else {
+      window.location.href = "index.html"; // fallback αν δεν υπάρχει προηγούμενη
+    }
+  }
+</script>
 </body>
 </html>
