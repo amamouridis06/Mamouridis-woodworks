@@ -182,24 +182,35 @@
   </section>
 </section>
 
-<!-- Footer -->
 <footer class="footer">
   <div class="container footer__inner">
-    <div>
-      <div class="footer__brand">Woodworks</div>
-      <div class="footer__muted">Ξυλουργικές Κατασκευές</div>
-    </div>
-    <div>© <span id="year"></span> X Woodworks. All rights reserved. Created by X X </div>
-    <div class="footer__links">
-      <a href="services.html">Υπηρεσίες</a>
-      <a href="about.html">Σχετικά</a>
-      <a href="contact.html">Επικοινωνία</a>
-      <a href="site.html">Αρχική</a>
+
+    <div class="footer__brand">
+      <div class="footer__logo">Woodworks</div>
+      <div class="footer__tag">Ξυλουργικές Κατασκευές</div>
     </div>
 
-    
+    <nav class="footer__nav" aria-label="Footer navigation">
+      <a href="services.html">Υπηρεσίες</a>
+      <a href="portfolio.html">Οι δουλειές μας</a>
+      <a href="about.html">Σχετικά</a>
+      <a href="contact.html">Επικοινωνία</a>
+      <a href="index.html">Αρχική</a>
+    </nav>
+
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <span>© <span id="year"></span> X Woodworks. All rights reserved.</span>
+      <span class="footer__madeby">Created by <a href="#" rel="noopener">X X</a></span>
+    </div>
   </div>
 </footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 <a class="to-top" href="#top" aria-label="Πάνω">↑</a>
 <script src="js/main.js"></script>
