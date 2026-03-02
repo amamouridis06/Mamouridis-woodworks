@@ -1,20 +1,23 @@
 :root{
-  --bg: #faf8f5;          /* warm off-white */
-  --soft: #f3f0ea;        /* section bg */
-  --card: #ffffff;        /* clean cards */
-  --text: #121212;        /* ink */
-  --muted: rgba(18,18,18,.68);
-  --line: rgba(18,18,18,.10);
+  --bg: #f6f7f9;              /* modern light gray */
+  --soft: #eef1f5;            /* section separation */
+  --card: #ffffff;            /* clean cards */
 
-  --accent: #b08d3c;      /* bronze-gold */
-  --accent2:#8f7230;
+  --text: #1a1d24;            /* soft dark, όχι μαύρο */
+  --muted: #6b7280;           /* neutral muted */
+  --line: rgba(20,23,28,.08);
+
+  --accent: #4f46e5;          /* modern indigo */
+  --accent2:#3730a3;
 
   --white:#ffffff;
-  --shadow: 0 18px 45px rgba(10,10,10,.10);
 
-  --radius: 18px;
-  --radius2: 12px;
-  --container: 1120px;
+  --shadow: 0 12px 30px rgba(15,23,42,.08);
+
+  --radius: 14px;
+  --radius2: 10px;
+
+  --container: 1140px;
 }
 
 *{ box-sizing: border-box; }
